@@ -1,5 +1,12 @@
-const path = require('path')
+const express = require('express')
 
-let go = path.resolve(__dirname)
+const app = express()
+const PORT = process.env.PORT || 3001
 
-go.trim()
+app.get('/', (req, res) => {
+    res.send('Hello world')
+})
+
+app.listen(PORT, () =>
+    console.log(`Server has been started on port ${PORT}`)
+)
