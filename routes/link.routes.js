@@ -21,7 +21,7 @@ router.post('/generate', auth, async (req, res) => {
         const to = baseUrl + '/t/' + code
 
         const link = new Link({
-            code, to, from, owner: req.user.userId
+            from, code, to, owner: req.user.userId
         })
 
         await link.save()
@@ -29,7 +29,7 @@ router.post('/generate', auth, async (req, res) => {
         res.status(201).json({link})
 
     } catch (e) {
-        res.status(500).json({message: 'Что-то пошло не так...'})
+        res.status(500).json({message: 'Что-то пошло не так...', error: e})
     }
 })
 
