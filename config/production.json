@@ -1,0 +1,6 @@
+{
+  "port": 3001,
+  "jwtSecret": "shitsoft",
+  "mongoUri": "mongodb://ivan:shitsoft@cluster0-shard-00-00.gxqw1.mongodb.net:27017,cluster0-shard-00-01.gxqw1.mongodb.net:27017,cluster0-shard-00-02.gxqw1.mongodb.net:27017/app?ssl=true&replicaSet=atlas-12ipjf-shard-0&authSource=admin&retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:3001"
+}
